@@ -1,0 +1,188 @@
+        :root {
+            --primary: #6a11cb;      /* purple */
+            --secondary: #2575fc;    /* blue */
+            --accent: #ffd700;       /* gold */
+            --bg: #f5f7fa;           /* very light gray */
+            --glass: rgba(255,255,255,0.8);
+            --text: #232946;         /* deep blue */
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        header.hero {
+            background: linear-gradient(120deg, var(--primary) 60%, var(--secondary) 100%);
+            color: #fff;
+            padding: 80px 0 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+        .profile-photo:hover {
+            transform: scale(1.07) rotate(-3deg);
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .headline {
+            font-size: 1.3rem;
+            margin-bottom: 22px;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 0;
+        }
+        .skill-badge {
+            background: var(--accent);
+            color: #222;
+            border-radius: 20px;
+            padding: 7px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: background 0.2s, color 0.2s;
+        }
+        .skill-badge:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        .social-icons {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+        }
+        .social-icons a {
+            color: #fff;
+            background: var(--secondary);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .social-icons a:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+        nav {
+            background: var(--glass);
+            box-shadow: var(--shadow);
+            padding: 12px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(8px);
+        }
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 22px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--secondary);
+        }
+        section {
+            max-width: 900px;
+            margin: 60px auto;
+            background: var(--glass);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 44px 34px;
+            backdrop-filter: blur(8px);
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: none;}
+        }
+        section h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 2rem;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px;
+        }
+        .about-text {
+            flex: 2;
+            min-width: 220px;
+        }
+        .about-details {
+            flex: 1;
+            min-width: 180px;
+            background: #f0f4fa;
+            border-radius: 12px;
+            padding: 20px 18px;
+            margin-top: 10px;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .about-details strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--secondary);
+        }
+        ul {
+            padding-left: 18px;
+        }
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .contact-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 16px;
+            transition: color 0.2s;
+        }
+        .contact-links a:hover {
+            color: var(--secondary);
+        }
+        @media (max-width: 700px) {
+            section {
+                padding: 24px 8px;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .profile-photo {
+                width: 110px;
+                height: 110px;
+            }
+        }
